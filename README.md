@@ -45,3 +45,4 @@ Active and continuously documented.
 - [`docs/network-topology.md`](docs/network-topology.md)
 - [`docs/workload-inventory.md`](docs/workload-inventory.md)
 - [`docs/discovery-method.md`](docs/discovery-method.md)
+- [`docs/workload-profiles.md`](docs/workload-profiles.md)
