@@ -39,3 +39,9 @@ This repository demonstrates production-minded engineering habits:
 ## Status
 
 Active and continuously documented.
+
+## Live Infrastructure Documentation
+
+- [`docs/network-topology.md`](docs/network-topology.md)
+- [`docs/workload-inventory.md`](docs/workload-inventory.md)
+- [`docs/discovery-method.md`](docs/discovery-method.md)
