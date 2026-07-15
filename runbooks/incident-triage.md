@@ -1,8 +1,23 @@
-# Incident Triage Runbook
+# Runbook: incident triage
 
-1. Confirm blast radius (which services/users are affected).
-2. Check recent changes (config, deploy, host updates).
-3. Verify host health and network path first.
-4. Collect minimal evidence (logs, timestamps, metrics).
-5. Apply safest corrective action.
-6. Document root cause hypothesis and follow-up tasks.
+## Classify
+
+| Symptom | Likely layer |
+|---|---|
+| Nothing resolves by name | DNS |
+| Name works, HTTPS fails | Proxy / cert / upstream |
+| One app only | Guest / container / app process |
+| Many guests down | Host, storage, or power |
+| Off-LAN only | Tailscale / remote path |
+
+## Actions
+
+1. **Observe** — status, logs, last change  
+2. **Contain** — don’t reboot the host as first move  
+3. **Fix the highest layer that explains the blast radius**  
+4. **Verify** user path (browser or curl)  
+5. **Write** one line: cause + prevention  
+
+## Red-sensitive
+
+Stop/start/delete of secrets, photos, DNS, proxy, PBS — only with clear intent.

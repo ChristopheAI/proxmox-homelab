@@ -1,8 +1,14 @@
-# Monthly Maintenance Runbook
+# Runbook: monthly maintenance
 
-1. Validate backup job success status.
-2. Verify monitoring checks and alert channels.
-3. Review disk, memory, and host pressure trends.
-4. Apply planned updates with rollback awareness.
-5. Re-test one restore path.
-6. Log noteworthy incidents and lessons.
+## Checklist
+
+- [ ] Proxmox + PBS package updates (planned window)  
+- [ ] Guest disk growth / storage % review  
+- [ ] Failed systemd units on noisy CTs  
+- [ ] Backup job success sample + one restore drill note  
+- [ ] Remove or archive abandoned lab guests  
+- [ ] Refresh public inventory if roles changed  
+
+## Cadence note
+
+Homelab time is limited. Prefer **small monthly hygiene** over large redesigns without a restore story.

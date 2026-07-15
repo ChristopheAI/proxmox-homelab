@@ -1,7 +1,17 @@
-# Discovery Method
+# Discovery method
 
-The inventory is generated from live Proxmox state (not manual memory) using:
+Inventory and health are generated from **live Proxmox state** (SSH/API/scripts), not from memory.
 
+Private control plane tools produce:
 
+- guest list (type, name, running/stopped)  
+- storage usage snapshots  
+- service catalog / situation layer for operators  
 
-Public repository note: sensitive details (credentials, full internal exposure map) are intentionally excluded.
+This public repo receives a **sanitized extract**:
+
+- no IPs  
+- no credentials  
+- no secret-bearing descriptions from the hypervisor  
+
+When private and public disagree, **private live checks win**.

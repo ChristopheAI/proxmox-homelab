@@ -1,16 +1,14 @@
-# Roadmap
+# Roadmap (living)
 
-## Phase 1
-- Document current Proxmox topology and service map
-- Add baseline backup/restore runbook
-- Add standard health-check checklist
+## Done enough for portfolio
 
-## Phase 2
-- Add monitoring stack documentation and alert thresholds
-- Add network segmentation and hardening notes
-- Add incident playbooks for common failures
+- [x] Document topology and service roles (public-safe)  
+- [x] PBS off-box backups  
+- [x] Proxy + DNS + monitoring lanes  
+- [x] Runbooks for health / triage / monthly  
 
-## Phase 3
-- Automate recurring ops tasks
-- Add reproducible provisioning notes
-- Add monthly reliability review checklist
+## Next (private first, then sanitize here)
+
+- [ ] Tighter service health matrix per critical guest  
+- [ ] More frequent public inventory refresh  
+- [ ] Document restore drill results (without secrets)  

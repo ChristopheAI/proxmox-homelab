@@ -1,18 +1,20 @@
 # Monitoring
 
-## Goals
+## Layers
 
-- Detect failures early
-- Reduce mean time to diagnose
-- Keep alerts actionable
+| Layer | Tooling (examples) | Question it answers |
+|---|---|---|
+| Endpoint up | Uptime Kuma | Is the URL/port up? |
+| Network / device | LibreNMS | What changed on the network? |
+| Host / guest pulse | pulse monitoring CT | Is the infra plane noisy? |
+| Human path | Browser / curl host checks via proxy | Does the user path work? |
 
-## Baseline
+## Alert principles
 
-- Uptime checks for critical services
-- Basic host/service health visibility
-- Alert paths tested after major changes
+- Prefer **actionable** alerts over chatty ones  
+- After major changes, re-check the monitoring path itself  
+- Failed units on LXC (AppArmor/sysusers noise) are tracked as known follow-ups when non-blocking  
 
-## Improvement Track
+## Portfolio signal
 
-- Add service-level check matrix
-- Define severity levels and response expectations
+This is not a NOC. It is evidence of **reliability habits**: visibility before restart, and health surfaces per service type.

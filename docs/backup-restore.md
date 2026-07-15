@@ -1,18 +1,23 @@
-# Backup and Restore
+# Backup and restore
 
 ## Principle
 
-Backups are only useful if restore steps are documented and tested.
+A backup that has never been restored is a hypothesis.
 
-## Baseline Process
+## Pattern
 
-- Identify critical data paths per service
-- Define backup cadence by criticality
-- Keep restore notes close to each workload
+- **Proxmox Backup Server (PBS)** on a separate machine  
+- Guest backups by criticality (personal data and secrets first)  
+- Bind-mounted data paths (photos, shares) need explicit data ownership notes  
+- Occasional **restore drills** on disposable guests  
 
-## Restore Drill Checklist
+## Restore drill (template)
 
-- Pick one representative service
-- Restore to test target
-- Validate service start + data integrity
-- Record deviations and update runbook
+1. Pick one representative guest or dataset  
+2. Restore to a test target (not production data path)  
+3. Validate start + data integrity  
+4. Record what broke in the notes and fix the runbook  
+
+## Public-safe note
+
+Schedules, retention, and storage credentials stay private.
