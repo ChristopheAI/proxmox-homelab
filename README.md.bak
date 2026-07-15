@@ -58,7 +58,6 @@ Details: [`docs/operating-model.md`](docs/operating-model.md)
 
 | Doc | Content |
 |---|---|
-| [`docs/application-operations.md`](docs/application-operations.md) | Application beheer on this platform |
 | [`docs/architecture.md`](docs/architecture.md) | Topology and design choices |
 | [`docs/services.md`](docs/services.md) | Service catalog by role and priority |
 | [`docs/workload-inventory.md`](docs/workload-inventory.md) | Guest map (IDs/names, no IPs) |

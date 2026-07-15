@@ -41,3 +41,5 @@ Roles and priority as I operate them. No hostnames/IPs.
 - **Red-sensitive:** DNS, proxy, Tailscale, backups, bind mounts, secrets guests — change only with explicit intent  
 - **Expected stopped:** lab/archive guests are allowed to stay down  
 - Live state always comes from Proxmox checks, not this markdown alone  
+
+See also: [application-operations.md](application-operations.md) — application beheer framing.
